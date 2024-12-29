@@ -1,0 +1,182 @@
+
+/* Projects.module.css */
+.projects {
+  padding: 2rem;
+  background: #f4f4f9; /* Subtle gradient */
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-top: 70px;
+  margin-bottom: 2rem;
+  color: #6A0DAD; /* Purple color for the title */
+  letter-spacing: 2px;
+}
+
+.grid {
+  display: grid;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
+}
+
+.card {
+  margin-top: 2rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 0;
+  height: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  box-shadow: 0 4px 8px rgba(136, 133, 138, 0.2);
+  overflow: hidden; /* Ensure smooth hover effects */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(50, 46, 53, 0.2);
+  border: 1px solid #6A0DAD; /* Highlight border on hover */
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 1rem 0 0.5rem;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.imageContainer {
+  overflow: hidden;
+  height: 250px; /* Adjusted height for better proportions */
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.1); /* Zoom-in effect */
+  filter: brightness(0.9); /* Darken image slightly */
+}
+
+.projectTitle {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 1rem 0 0.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.projectLink {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  color: #6a1b9a; /* Purple link color */
+  text-decoration: none;
+  border-radius: 20px;
+  border: 2px solid #6a1b9a;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  margin: 1rem auto; /* Center the link */
+  font-family: 'Roboto', sans-serif;
+}
+
+.projectLink:hover {
+  background-color: #6a1b9a;
+  color: #fff;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
+
+/* Media Queries for Responsiveness */
+
+/* For medium screens: 2 cards per row */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    height: 300px; /* Adjust card height */
+  }
+}
+
+/* For small screens: 1 card per row */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 2rem; /* Adjust title size */
+    padding-top: 4rem;
+  }
+
+  .card {
+    margin: 0 auto; /* Center cards */
+    height: 280px; /* Adjust card height */
+    width: 280px;
+  
+  }
+}
+
+@media (max-width: 480px) {
+
+  .projects {
+    padding: 0.5rem;
+  }
+  .title {
+    font-size: 1.8rem; /* Smaller title */
+    margin-top: 20px;
+  }
+
+  .card {
+    height: 250px; /* Further reduce card height */
+  }
+
+  .card h3 {
+    font-size: 1.2rem; /* Smaller font for headings */
+  }
+
+  .card p {
+    font-size: 0.9rem; /* Smaller paragraph text */
+  }
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+
+  .projects {
+    padding: 0.5rem;
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .card h3 {
+    font-size: 1.3rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+}
+
+  

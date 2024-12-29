@@ -1,0 +1,154 @@
+
+.root {
+  --primary-color: #6a0dad; 
+  --secondary-color: #ffffff; 
+   --text-color: #f5f5f5;
+  --accent-color: #ffffff;
+}
+
+
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 140px 60px;
+  color: var(--text-color);
+  background-color: #f5f5f5;
+}
+
+.homeContent {
+  text-align: center;
+  max-width: 600px;
+  margin-top: 0px;
+}
+
+.homeContent h3 {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.homeContent h1 {
+  font-size: 2.5rem;
+  color: #6A0DAD;
+  font-family: a; /* Add a modern font */
+  text-transform: uppercase; /* Make the title uppercase */
+  letter-spacing: 1px;
+  font-size: 2.5rem;
+  margin: 10px 0;
+  margin-top: 10px;
+}
+
+.homeContent h3 span {
+  color: var(--accent-color);
+  font-weight: bold;
+  padding-top: 12px;
+  padding-bottom: 10px;
+}
+
+.homeContent p {
+  color: var(--text-color);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 10px;
+  color: #666;
+}
+
+.socialMedia {
+  margin: 20px 0;
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;  
+}
+
+.socialMedia a {
+  display: inline-flex;
+  background: transparent;
+  color: #6A0DAD;
+  font-size: 2rem;
+  gap: 20px;
+  transition: color 0.3s;
+}
+
+.socialMedia a:hover {
+  color: #9f54d0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 24px;
+  background-color: #6A0DAD;
+  color: #f5f5f5;
+  border-radius: 22px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #9f54d0;
+  color: #f5f5f5;
+}
+
+.homeImg {
+  margin-top: 30px;
+}
+
+.dp {
+  width: 350px;
+  height: 350px;
+  justify-content: center;
+  border-radius: 100%;
+  object-fit: cover;
+  border: 5px solid var(--accent-color);
+  margin-bottom: 20px;
+}
+
+ @media (min-width: 768px) {
+  .home {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .homeContent p {
+    font-size: 1rem;
+  }
+
+  .homeContent {
+    text-align: left;
+    max-width: 50%;
+  }
+
+  .homeImg {
+    max-width: 50%;
+    text-align: right;
+  }
+}
+
+@media (max-width: 768px) {
+  .socialMedia {
+    justify-content: center; 
+    flex-direction: row;
+    margin-top: 2rem;
+  }
+
+  .home {
+    padding: 80px 20px; 
+  }
+
+  .homeImg {
+    order: -1; 
+    margin-top: 1rem; 
+  }
+
+  .dp {
+    width: 190px;
+    height: 190px;
+  }
+} 
+ 
+
+  

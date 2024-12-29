@@ -1,0 +1,98 @@
+
+.about {
+  padding: 4rem;
+  padding-top: 40px;
+  background-color: #f4f4f9; /* Light background color */
+}
+
+.container {
+  /* margin-top: 2rem; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem; /* Add spacing for smaller screens */
+}
+
+.image {
+  width: 300%;
+  height: 300px; /* Limit the image size */
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.textContainer {
+  flex: 2;
+  text-align: center; /* Center text on smaller screens */
+}
+
+.textContainer h1 {
+  font-size: 2.5rem;
+  color: #6A0DAD;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.textContainer p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+
+/* Responsive Styles for Tablets and Mobile */
+@media (max-width: 768px) {
+  .about {
+    padding: 0;
+  }
+
+  .container {
+    flex-direction: column; /* Stack items vertically */
+    gap: 2rem; /* Space between elements */
+  }
+
+  .imageContainer {
+    order: 1; /* Image comes first */
+  }
+
+  .textContainer {
+    order: 2; /* Text comes after the image */
+  }
+
+  .textContainer h1 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .textContainer p {
+    font-size: 0.9rem; /* Adjust text size */
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 0.5rem; /* Reduce padding for small screens */
+  }
+
+  .textContainer h1 {
+    font-size: 1.8rem; /* Further reduce font size */
+  }
+
+  .textContainer p {
+    font-size: 0.95rem; /* Further adjust text size */
+    padding: 0;
+  }
+
+  .image {
+    max-width: 300px; /* Limit image size */
+  }
+}
+
